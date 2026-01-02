@@ -34,6 +34,7 @@ function App() {
   );
 
   useUppyEvent(uppy, "file-added", () => uppy.upload());
+  useUppyEvent(uppy, "complete", () => alert("complete"));
 
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [modalPlugin, setModalPlugin] = useState<
